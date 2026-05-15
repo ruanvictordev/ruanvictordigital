@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruan Victor — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {}
+      }
+    }
+  </script>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/resizing_sdk.js" type="text/javascript"></script>
+</head>
+<body data-template-id="__page-root" class="w-full" style="background: rgb(13, 13, 13);">
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background: transparent;">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
+      <a href="#" data-template-id="nav-logo" class="canva-text font-display text-2xl font-bold tracking-wide" style="color: rgb(245, 245, 240); font-weight: 700;">RV</a>
+      <div class="hidden md:flex items-center gap-8 text-sm tracking-wide">
+        <a href="#sobre" class="nav-link text-[#C8C8C0] hover:text-[#F5F5F0] transition-colors">Sobre mim</a>
+        <a href="#servicos" class="nav-link text-[#C8C8C0] hover:text-[#F5F5F0] transition-colors">Serviços</a>
+        <a href="#trabalhos" class="nav-link text-[#C8C8C0] hover:text-[#F5F5F0] transition-colors">Meus Trabalhos</a>
+        <a href="#processo" class="nav-link text-[#C8C8C0] hover:text-[#F5F5F0] transition-colors">Processo</a>
+        <a href="#contato" class="nav-link text-[#C8C8C0] hover:text-[#F5F5F0] transition-colors">Contato</a>
+      </div>
+      <button id="hamburger" class="md:hidden text-[#F5F5F0]" aria-label="Menu">
+        <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] bg-[#0D0D0D] flex flex-col items-center justify-start gap-8 pt-24">
+    <button id="close-menu" class="absolute top-6 right-6 text-[#F5F5F0]" aria-label="Fechar">
+      <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+    </button>
+    <a href="#sobre" class="mobile-nav font-display text-2xl font-bold text-[#F5F5F0] hover:text-[#C8C8C0] transition-colors">Sobre mim</a>
+    <a href="#servicos" class="mobile-nav font-display text-2xl font-bold text-[#F5F5F0] hover:text-[#C8C8C0] transition-colors">Serviços</a>
+    <a href="#trabalhos" class="mobile-nav font-display text-2xl font-bold text-[#F5F5F0] hover:text-[#C8C8C0] transition-colors">Meus Trabalhos</a>
+    <a href="#processo" class="mobile-nav font-display text-2xl font-bold text-[#F5F5F0] hover:text-[#C8C8C0] transition-colors">Processo</a>
+    <a href="#contato" class="mobile-nav font-display text-2xl font-bold text-[#F5F5F0] hover:text-[#C8C8C0] transition-colors">Contato</a>
+  </div>
+
+  <!-- HERO -->
+  <header id="hero" class="relative w-full flex flex-col items-center justify-center text-center px-4 sm:px-6" style="min-height: calc(100 * min(var(--vh, 1vh), 1vh)); background: #0D0D0D; background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, .03) 0%, transparent 60%);">
+    <div class="grain"></div>
+    <p data-template-id="hero-label" class="canva-text reveal text-sm tracking-[.3em] mb-8" style="opacity: 0.5; color: rgb(245, 245, 240);">PORTFOLIO</p>
+    <h1 data-template-id="hero-name" class="canva-text reveal" style="font-size: 32px; line-height: 1; letter-spacing: 0.02em; color: rgb(245, 245, 240); font-weight: 700;">RUAN VICTOR</h1>
+    <p data-template-id="hero-tagline" class="canva-text italic reveal mt-4 md:mt-6 text-sm sm:text-base md:text-2xl" style="color: rgb(200, 200, 192); font-style: italic;">Transformando visão em narrativa visual.</p>
+    <div class="flex flex-wrap justify-center gap-2 md:gap-3 mt-6 md:mt-10 reveal">
+      <span data-template-id="hero-tag-1" class="canva-tag border border-[#88888060] rounded-full px-4 md:px-5 py-1.5 md:py-2 text-xs md:text-sm tracking-wide" style="color: rgb(245, 245, 240);">Videomaker</span>
+      <span data-template-id="hero-tag-2" class="canva-tag border border-[#88888060] rounded-full px-4 md:px-5 py-1.5 md:py-2 text-xs md:text-sm tracking-wide" style="color: rgb(245, 245, 240);">Design</span>
+      <span data-template-id="hero-tag-3" class="canva-tag border border-[#88888060] rounded-full px-4 md:px-5 py-1.5 md:py-2 text-xs md:text-sm tracking-wide" style="color: rgb(245, 245, 240);">Social Media</span>
+    </div>
+    <div class="absolute bottom-10 flex flex-col items-center gap-2 reveal">
+      <span class="text-[10px] tracking-[.3em] text-[#C8C8C0] uppercase">scroll</span>
+      <div class="w-px h-8 bg-[#888880] scroll-line"></div>
+    </div>
+  </header>
+
+  <div class="section-border"></div>
+
+  <!-- SOBRE MIM -->
+  <section id="sobre" class="relative w-full py-12 md:py-16 px-6" style="background: #111111;">
+    <div class="diagonal-lines"></div>
+    <div class="max-w-6xl mx-auto relative px-4 sm:px-0">
+      <p data-template-id="sobre-label" class="canva-text reveal text-sm tracking-[.2em] uppercase mb-4" style="color: #888880;">Sobre mim</p>
+      <div class="flex flex-col md:flex-row gap-8 lg:gap-16 items-start">
+        <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+          <div class="w-px bg-[#88888050] flex-grow" style="min-height: 80px; display: none;"></div>
+          <img data-template-id="sobre-photo" loading="lazy" class="canva-image rounded-md object-contain w-full" src="https://i.ibb.co/zTc1nWN8/1000741646.jpg" alt="Ruan Victor">
+        </div>
+        <div class="w-full md:w-1/2">
+          <h2 data-template-id="sobre-heading" class="canva-text reveal text-2xl md:text-4xl lg:text-5xl mb-6 md:mb-8" style="color: rgb(245, 245, 240); font-size: 24px;">Criatividade com propósito.</h2>
+          <p data-template-id="sobre-p1" class="canva-text reveal mb-3 md:mb-4 text-sm md:text-base leading-relaxed" style="color: #C8C8C0;">Sou Ruan Victor, profissional criativo apaixonado por storytelling visual. Há mais de cinco anos, ajudo marcas e pessoas a traduzirem suas ideias em conteúdos que conectam, emocionam e geram resultados.</p>
+          <p data-template-id="sobre-p2" class="canva-text reveal mb-3 md:mb-4 text-sm md:text-base leading-relaxed" style="color: #C8C8C0;">Minha abordagem combina estética refinada com estratégia — cada projeto nasce de um entendimento profundo do público, da mensagem e do meio. Do roteiro ao pixel final, cada detalhe é intencional.</p>
+          <p data-template-id="sobre-p3" class="canva-text reveal text-sm md:text-base leading-relaxed" style="color: #C8C8C0;">Acredito que design, vídeo e redes sociais não são disciplinas isoladas, mas peças de uma narrativa maior. Meu trabalho é conectar essas peças de forma autêntica e memorável.</p>
+          <div class="grid grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-12 pt-6 md:pt-8 border-t border-[#88888030] reveal">
+            <div>
+              <p data-template-id="stat-1-val" class="canva-text text-xl md:text-2xl lg:text-3xl" style="color: rgb(245, 245, 240);">1+</p>
+              <p data-template-id="stat-1-label" class="canva-text text-xs md:text-sm tracking-wider mt-1" style="color: #888880;">Ano de Experiência</p>
+            </div>
+            <div>
+              <p data-template-id="stat-2-val" class="canva-text text-xl md:text-2xl lg:text-3xl" style="color: rgb(245, 245, 240);">30+</p>
+              <p data-template-id="stat-2-label" class="canva-text text-xs md:text-sm tracking-wider mt-1" style="color: #888880;">Projetos Entregues</p>
+            </div>
+            <div>
+              <p data-template-id="stat-3-val" class="canva-text text-xl md:text-2xl lg:text-3xl" style="color: rgb(245, 245, 240);">20+</p>
+              <p data-template-id="stat-3-label" class="canva-text text-xs md:text-sm tracking-wider mt-1" style="color: #888880;">Clientes Satisfeitos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-border"></div>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="relative w-full py-12 md:py-16 px-6" style="background: #0D0D0D;">
+    <div class="top-gradient-border"></div>
+    <div class="max-w-6xl mx-auto relative px-4 sm:px-0">
+      <div class="grid md:grid-cols-3 gap-4 md:gap-6">
+        <article data-template-id="svc-card-1" class="canva-card card-service rounded-md border border-[#88888040] p-6 md:p-8 reveal" style="background: rgb(26, 26, 26);">
+          <div class="mb-6 text-[#C8C8C0]">
+            <i data-lucide="play" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 data-template-id="svc-1-title" class="canva-text text-lg md:text-xl mb-3 md:mb-4" style="color: rgb(245, 245, 240); font-size: 19px;">Videomaker</h3>
+          <p data-template-id="svc-1-desc" class="canva-text text-sm leading-relaxed" style="color: #C8C8C0;">Produção de vídeos institucionais, reels, documentários e conteúdo digital com narrativa envolvente.</p>
+        </article>
+        <article data-template-id="svc-card-2" class="canva-card card-service rounded-md border border-[#88888040] p-6 md:p-8 reveal" style="background: rgb(26, 26, 26);">
+          <div class="mb-6 text-[#C8C8C0]">
+            <i data-lucide="pen-tool" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 data-template-id="svc-2-title" class="canva-text text-lg md:text-xl mb-3 md:mb-4" style="color: rgb(245, 245, 240); font-size: 19px;">Design</h3>
+          <p data-template-id="svc-2-desc" class="canva-text text-sm leading-relaxed" style="color: #C8C8C0;">Identidade visual, branding, peças gráficas e materiais digitais com estética refinada.</p>
+        </article>
+        <article data-template-id="svc-card-3" class="canva-card card-service rounded-md border border-[#88888040] p-6 md:p-8 reveal" style="background: rgb(26, 26, 26);">
+          <div class="mb-6 text-[#C8C8C0]">
+            <i data-lucide="share-2" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 data-template-id="svc-3-title" class="canva-text text-lg md:text-xl mb-3 md:mb-4" style="color: rgb(245, 245, 240); font-size: 19px;">Social Media</h3>
+          <p data-template-id="svc-3-desc" class="canva-text text-sm leading-relaxed" style="color: #C8C8C0;">Gestão estratégica de redes sociais, criação de conteúdo e posicionamento de marca no digital.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-border"></div>
+
+  <!-- MEUS TRABALHOS -->
+  <section id="trabalhos" class="relative w-full py-12 md:py-16 px-6" style="background: #141414;">
+    <div class="radial-bloom"></div>
+    <div class="max-w-6xl mx-auto relative">
+      <p data-template-id="trabalhos-label" class="canva-text reveal text-sm tracking-[.2em] uppercase mb-4" style="color: #888880;">Meus Trabalhos</p>
+      <h2 data-template-id="trabalhos-heading" class="canva-text reveal text-3xl md:text-5xl mb-10" style="color: rgb(245, 245, 240); font-size: 24px;">Projetos Recentes.</h2>
+      <div class="flex flex-wrap gap-3 mb-12 reveal">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="video">Vídeo</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+      </div>
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      </div>
+    </div>
+  </section>
+
+  <div class="section-border"></div>
+
+  <!-- PROCESSO -->
+  <section id="processo" class="relative w-full py-12 md:py-16 px-6" style="background: #111111;">
+    <div class="dot-grid"></div>
+    <div class="max-w-6xl mx-auto relative">
+      <p data-template-id="processo-label" class="canva-text reveal text-sm tracking-[.2em] uppercase mb-4" style="color: #888880;">Processo</p>
+      <h2 data-template-id="processo-heading" class="canva-text reveal text-3xl md:text-5xl mb-16" style="color: rgb(245, 245, 240); font-size: 24px;">Como funciona.</h2>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="reveal relative pl-6 md:pl-0 md:pt-8">
+          <div class="absolute left-0 top-0 bottom-0 w-px bg-[#888880] md:hidden"></div>
+          <div class="hidden md:block absolute top-0 left-0 right-0 h-px bg-[#888880]"></div>
+          <div class="w-2 h-2 rounded-full bg-[#F5F5F0] absolute left-[-3px] top-1 md:left-0 md:top-[-3px]"></div>
+          <h3 data-template-id="step-1-title" class="canva-text text-lg mb-3" style="color: rgb(245, 245, 240); font-size: 19px;">Briefing</h3>
+          <p data-template-id="step-1-desc" class="canva-text text-sm leading-relaxed" style="color: #C8C8C0;">Entendo seus objetivos, público e visão do projeto.</p>
+        </div>
+        <div class="reveal relative pl-6 md:pl-0 md:pt-8">
+          <div class="absolute left-0 top-0 bottom-0 w-px bg-[#888880] md:hidden"></div>
+          <div class="hidden md:block absolute top-0 left-0 right-0 h-px bg-[#888880]"></div>
+          <div class="w-2 h-2 rounded-full bg-[#F5F5F0] absolute left-[-3px] top-1 md:left-0 md:top-[-3px]"></div>
+          <h3 data-template-id="step-2-title" class="canva-text text-lg mb-3" style="color: rgb(245, 245, 240); font-size: 19px;">Planejamento</h3>
+          <p data-template-id="step-2-desc" class="canva-text text-sm leading-relaxed" style="color: #C8C8C0;">Estratégia, roteiro e conceito visual definidos juntos.</p>
+        </div>
+        <div class="reveal relative pl-6 md:pl-0 md:pt-8">
+          <div class="absolute left-0 top-0 bottom-0 w-px bg-[#888880] md:hidden"></div>
+          <div class="hidden md:block absolute top-0 left-0 right-0 h-px bg-[#888880]"></div>
+          <div class="w-2 h-2 rounded-full bg-[#F5F5F0] absolute left-[-3px] top-1 md:left-0 md:top-[-3px]"></div>
+          <h3 data-template-id="step-3-title" class="canva-text text-lg mb-3" style="color: rgb(245, 245, 240); font-size: 19px;">Execução</h3>
+          <p data-template-id="step-3-desc" class="canva-text text-sm leading-relaxed" style="color: #C8C8C0;">Produção com atenção a cada detalhe estético e técnico.</p>
+        </div>
+        <div class="reveal relative pl-6 md:pl-0 md:pt-8">
+          <div class="hidden md:block absolute top-0 left-0 right-0 h-px bg-[#888880]"></div>
+          <div class="w-2 h-2 rounded-full bg-[#F5F5F0] absolute left-[-3px] top-1 md:left-0 md:top-[-3px]"></div>
+          <h3 data-template-id="step-4-title" class="canva-text text-lg mb-3" style="color: rgb(245, 245, 240); font-size: 19px;">Entrega</h3>
+          <p data-template-id="step-4-desc" class="canva-text text-sm leading-relaxed" style="color: #C8C8C0;">Revisões, aprovação final e entrega dos arquivos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-border"></div>
+
+  <!-- CONTATO -->
+  <section id="contato" class="relative w-full py-12 md:py-16 px-6" style="background: linear-gradient(to bottom, #0D0D0D, #1A1A1A);">
+    <div class="max-w-6xl mx-auto">
+      <p data-template-id="contato-label" class="canva-text reveal text-sm tracking-[.2em] uppercase mb-4" style="color: #888880;">Contato</p>
+      <h2 data-template-id="contato-heading" class="canva-text reveal text-3xl md:text-5xl mb-16" style="color: rgb(245, 245, 240); font-size: 24px;">Vamos trabalhar juntos?</h2>
+      <div class="reveal">
+        <p data-template-id="contato-text" class="canva-text leading-relaxed mb-10" style="color: #C8C8C0;">Tem um projeto em mente? Estou sempre aberto a novas colaborações e ideias. Entre em contato e vamos criar algo incrível juntos.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://instagram.com/ruanvictor.digital" target="_blank" rel="noopener noreferrer" class="pill-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+              <circle cx="12" cy="12" r="5"></circle>
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"></circle>
+            </svg>
+            <span data-template-id="btn-instagram" class="canva-text text-sm" style="color: rgb(245, 245, 240);">Instagram</span>
+          </a>
+          <a href="https://wa.me/558681418197" target="_blank" rel="noopener noreferrer" class="pill-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path>
+              <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Zm0 0a5 5 0 0 0 5 5m0 0h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1Z"></path>
+            </svg>
+            <span data-template-id="btn-whatsapp" class="canva-text text-sm" style="color: rgb(245, 245, 240);">WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="w-full py-8 px-6 text-center" style="background: #0D0D0D;">
+    <p data-template-id="footer-text" class="canva-text text-xs tracking-wider" style="color: rgb(136, 136, 128);">© 2026 Ruan Victor — Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="/_sdk/editing_sdk.js"></script>
+  <script src="app.js"></script>
+  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9fbd616284a5b127',t:'MTc3ODc5ODE3Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
