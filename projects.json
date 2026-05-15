@@ -1,6 +1,12 @@
 [
     {
         "type": "video",
+        "videoId": "PHa2RgKPOpA",
+        "title": "Branding Estúdio Lume",
+        "category": "video"
+    },
+    {
+        "type": "video",
         "videoId": "1wU-Z7VOybs",
         "title": "Você tem Fibromialgia?",
         "category": "video"
@@ -12,24 +18,10 @@
         "category": "video"
     },
     {
-        "type": "design",
-        "imageUrl": "https://i.ytimg.com/vi/ysc4jfioLyY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBRo1Nh70TR3zI6slJ0ProDJKfNNA",
-        "title": "Branding Estúdio Lume",
-        "category": "design",
-        "link": "https://www.youtube.com/watch?v=ysc4jfioLyY"
-    },
-    {
         "type": "video",
         "videoId": "QbTxlbpiw6w",
         "title": "Lançamento Livro - Benefícios por Incapacidade",
         "category": "video"
-    },
-    {
-        "type": "design",
-        "imageUrl": "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "title": "Identidade Visual Aura",
-        "category": "design",
-        "link": "https://www.youtube.com/watch?v=ysc4jfioLyY"
     },
     {
         "type": "video",
