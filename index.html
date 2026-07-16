@@ -540,21 +540,35 @@
 
     // Reveal-on-scroll fallback (harmless if app.js already handles .reveal)
     (function(){
-      const items = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window)) {
-        items.forEach(el => el.classList.add('visible'));
-        return;
+    const items = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      items.forEach(el => el.classList.add('visible'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {
+      // threshold 0 + rootMargin generoso => dispara assim que
+      // QUALQUER pixel entra na viewport. Corrige containers mais
+      // altos que a tela (ex.: #projects-grid em mobile 1 coluna).
+      threshold: 0,
+      rootMargin: '0px 0px -10% 0px'
+    });
+    items.forEach(el => {
+      // Fail-safe: se o elemento for maior que a viewport ao carregar,
+      // já revela (evita qualquer edge case de layout).
+      if (el.getBoundingClientRect().height > window.innerHeight * 0.9) {
+        el.classList.add('visible');
+      } else {
+        io.observe(el);
       }
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-      items.forEach(el => io.observe(el));
-    })();
+    });
+  })();
   </script>
   <script src="/_sdk/editing_sdk.js"></script>
   <script src="app.js"></script>
