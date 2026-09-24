@@ -502,6 +502,35 @@
           </div>
         </div>
 
+        <div class="portfolio-card bg-panel2 rounded-xl border border-line p-3 transition-all hover:border-signal shadow-lg flex flex-col gap-3">
+          
+          <!-- Here is the fix: aspect-video, w-full, and h-full on the PARENT div -->
+          <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-black flex items-center justify-center">
+            <span class="clip-index">YouTube</span>
+            <span class="corner tl"></span><span class="corner br"></span>
+            
+            <!-- The iframe uses inset-0 and absolute to fill perfectly -->
+            <!-- Fix for Error 153: Using youtube-nocookie.com and removing the ?si= tracking parameter -->
+            <iframe 
+              class="absolute inset-0 w-full h-full" 
+              src="https://www.youtube.com/embed/-eBVggWwnTI?si=GzEOlqUv4utqwnyg" 
+              title="DON'T KNOW THE RIGHT TIME TO ENTER THE MARKET? THIS STRATEGY CAN HELP YOU! 📊" 
+              frameborder="0" 
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+            
+          </div>
+          
+          <div class="px-2 pb-1">
+            <h3 class="font-display font-semibold text-paper text-lg">O Big Trader</h3>
+            <p class="text-xs text-ash mt-1">
+VOCÊ NÃO SABE A HORA CERTA DE ENTRAR NO GRÁFICO? ESSA ESTRATÉGIA PODE TE AJUDAR! 📊</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
